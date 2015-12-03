@@ -1,0 +1,59 @@
+<!-- Site built using grunt includes! -->
+<!-- Site built using grunt includes! -->
+<!doctype html>
+<!--[if lt IE 7]>      <html class='no-js lt-ie9 lt-ie8 lt-ie7' lang='en'> <![endif]-->
+<!--[if IE 7]>         <html class='no-js lt-ie9 lt-ie8' lang='en'> <![endif]-->
+<!--[if IE 8]>         <html class='no-js lt-ie9' lang='en'> <![endif]-->
+<!--[if IE 9]>         <html class='no-js lt-ie10' lang='en'> <![endif]-->
+<!--[if gt IE 9]><!--> <html class='no-js' lang='en' xml:lang='en'> <!--<![endif]-->
+	<head>
+		<meta charset='utf-8'>
+		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+		<title>XT Shadow HTML Prototype</title>
+		<meta name='description' content='XT Shadow HTML Prototype'>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<link rel='icon' href='favicon.ico' type='image/x-icon' />
+			
+		<!-- build:css({.tmp,app}) styles/main.css -->
+		<link rel='stylesheet' href='styles/main.css'>
+		<!-- endbuild -->
+		<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+	</head>
+	<body>
+		
+			
+		<!-- Add your site or application content here -->
+		include "header.html"
+	   
+		<div class='container' id='mainContainer'>
+		</div>
+		include "generalInfo.html"
+ 	    include "skillSuperviserView.html"
+ 	    include "footer.html"
+
+ 
+		<!--jquery & jquery-ui-->
+		<!--<script src='bower_components/jquery/jquery.min.js'></script>
+		<script src='bower_components/jquery-ui/ui/minified/jquery-ui.min.js' defer></script>-->
+		
+		<!-- main js file -->
+		<!--Scripts which need to be added-->
+		<script src='scripts/vendor/jquery.js'></script>
+		<script src='scripts/vendor/jquery.mCustomScrollbar.js'></script>
+		<script src='scripts/vendor/handlebars.js'></script>
+		<script src='scripts/errorHandling.js'></script>
+		<script src='scripts/config.js'></script>
+		<script src='scripts/constants.js'></script>
+
+
+		
+		<!--Script which contains functions which call the template-->
+		<!--  // <script src='scripts/skillTable.js'></script>  -->
+		<script src='scripts/login.js'></script>
+		<script src='scripts/mockJSON/superviseeList.json'></script>
+		<script src='scripts/header.js'></script>
+		<script src='scripts/skillsuperviserView.js'></script>
+		<script src='scripts/generalInfoSkills.js'></script>
+
+</body>
+</html>

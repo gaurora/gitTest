@@ -1,0 +1,213 @@
+
+@import "variables";
+@import "mixin";
+
+
+
+/*default for mobile*/
+/*Resetting CSS*/
+html,body,a,img,li,ul,dl,dt,dd,h1,h2,h3,h4,h5,h6,div,span,section,header,footer,aside,p,main,input{
+	margin:0;
+	padding:0;
+}
+
+section,header,footer,aside,nav,main{
+	display: block;
+}
+body{
+	background-color:#EEEEEE;
+}
+
+html{
+	font-size:14px;
+}
+/*--------------------------------------
+fonts
+-----------------------------------------*/
+@font-face{
+    @include fontFace(SapientRegular,"../fonts/SPNTSR.TTF","../fonts/SapientSansRegular.eot");
+}
+@font-face{
+	@include fontFace(SapientMedium,"../fonts/SPNTSM.TTF","../fonts/SapientSansRegular.eot");
+}
+@font-face{
+	@include fontFace(SapientBold,"../fonts/SPNTSB.TTF","../fonts/SapientSansRegular.eot");
+}
+@font-face{
+	@include fontFace(SapientLight,"../fonts/SPNTSL.TTF","../fonts/SapientSansRegular.eot");
+}
+@font-face{
+	@include fontFace(SapientBlack,"../fonts/SPNTSK.TTF","../fonts/SapientSansRegular.eot");
+}
+@font-face{
+	@include fontFace(SapientMediumItalic,"../fonts/SPNTSMI.TTF","../fonts/SapientSansRegular.eot");
+}
+@font-face{
+	@include fontFace(SapientCentroSlab,"../fonts/SapientCentroSlab-Reg.otf","../fonts/SapientSansRegular.eot");
+}
+@font-face {
+    @include fontFace(fontAwesome, "../fonts/fontawesome-webfont.ttf","../fonts/fontawesome-webfont.ttf");
+}
+h1{
+	@include heading (3rem , 3rem, "SapientRegular", $primaryFontColor);
+}
+
+h2{
+	@include heading ( 1.5rem, 1.5rem, "SapientRegular", $headingFontColor );
+
+}
+
+h3{
+	@include heading (1.16rem, 1.16rem, "SapientRegular", $primaryFontColor);
+	text-decoration:underline;
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration:none;
+}
+
+input{
+	outline: none;
+}
+/*-----------------------------------------------
+For fix the size of container
+-------------------------------------------------*/
+
+.container{
+	max-width: $containerWidth;
+	margin: auto;
+}
+/*-----------------------------------------------
+For error msg
+-------------------------------------------------*/
+
+.error{
+    color:#DE2728;
+}
+/*-----------------------------------------------
+For warning msg
+-------------------------------------------------*/
+
+.warning{
+   color:#DA2421;
+}
+/*-----------------------------------------------
+For hidden 
+-------------------------------------------------*/
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+/*-----------------------------------------------
+For removeing underline
+-------------------------------------------------*/
+
+.link{
+	text-decoration:none; 
+	color:$tertiaryBgColor;
+	&:hover{
+		color:$tertiaryBgColor*.8;
+	}
+	&:active{
+		color:$secondryBackColor;
+	}
+}
+/*-----------------------------------------------
+For clearing float effect
+-------------------------------------------------*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/*-----------------------------------------------
+For accessibility of labels
+-------------------------------------------------*/
+
+.accessibility{
+	position: absolute; 
+    overflow: hidden; 
+    clip: rect(0 0 0 0); 
+    height: 1px; 
+    width: 1px; 
+    margin: -1px; 
+    padding: 0; 
+    border: 0; 
+}
+
+.uppercase{
+	text-transform: uppercase;
+}
+/*-----------------------------------------------
+For primary large button
+-------------------------------------------------*/
+
+.pri-lg-btn{
+	background-color:$tertiaryBgColor;
+	color:$tertiaryFontColor;
+	height:$lgBtnHeight;
+	width:$lgBtnWidth;
+	&:hover{
+	background-color:$tertiaryBgColor*.8;
+	}
+	&:active{
+	background-color:$tertiaryBgColor*.6;
+	}
+}
+/*-----------------------------------------------
+For secondry large button
+-------------------------------------------------*/
+
+.sec-lg-btn{
+	background-color:$secondryBackColor;
+	color:$tertiaryFontColor;
+	height:$smBtnHeight;
+	width:$smBtnWidth;
+	&:hover{
+	background-color:$secondryBackColor*.8;
+	}
+	&:active{
+	background-color:$secondryBackColor*.6;
+	}
+}
+// input[type="button"]{
+// 	text-transform: uppercase;
+// }
+.button{
+	background-color: $tertiaryBgColor;
+	color: $buttonFontColor;
+	min-width:67px;
+	border: none;
+	text-transform: capitalize;
+	height:2.5rem;
+	//font-size:1.3rem;
+	
+	&:hover{
+		cursor: pointer;
+		background-color: $hoverColor;
+	}
+}	
+button{
+	text-transform: capitalize;
+	border: none;
+	height:2.5rem;
+	//font-size:1.3rem;
+	outline: none;
+
+	font-family:"sapientRegular";
+	&:hover{
+		cursor: pointer;
+	} 
+
+}
+textarea{
+	color:#888;
+} 

@@ -1,0 +1,60 @@
+<!--  ==========================================================================
+@project SKILL Tool
+@name    header CSS file
+@author  akatoch@sapient.com
+ 
+@description- Header view CSS 
+==========================================================================  -->
+<!-- Site built using grunt includes! -->
+<!-- Site built using grunt includes! -->
+<!doctype html>
+<!--[if lt IE 7]>      <html class='no-js lt-ie9 lt-ie8 lt-ie7' lang='en'> <![endif]-->
+<!--[if IE 7]>         <html class='no-js lt-ie9 lt-ie8' lang='en'> <![endif]-->
+<!--[if IE 8]>         <html class='no-js lt-ie9' lang='en'> <![endif]-->
+<!--[if IE 9]>         <html class='no-js lt-ie10' lang='en'> <![endif]-->
+<!--[if gt IE 9]><!--> <html class='no-js' lang='en' xml:lang='en'> <!--<![endif]-->
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>XT Shadow HTML Prototype</title>
+        <meta name='description' content='XT Shadow HTML Prototype'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='icon' href='favicon.ico' type='image/x-icon' />
+            
+        <!-- build:css({.tmp,app}) styles/main.css -->
+        <link rel='stylesheet' href='styles/main.css'>
+        <!-- endbuild -->
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+    </head>
+    <body>
+        <main class='login-container'>
+            <section id='loginForm'>
+                <img src='../images/sapient_logo.png' alt='sapient logo'>
+                <h1><span class='eyp'>Skill</span><span class='tool'>Tool</span></h1>
+                <form action='#' method='GET' id='loginForm'>
+                    <label for='username'>username:</label>
+                    <input type='text' id='username' name='username' class='username' autocomplete='off' placeholder='Sapient NT ID' required>
+                    <label for='password'>password:</label>
+                    <input type='password' id='password' name='password' class='password'  autocomplete='off' placeholder='Password' required>
+                    <p class='error-message'></p>
+                    <input id='loginSubmitBtn' class="button" type='submit' value='log in'>
+                </form>
+            </section>
+        </main>
+        <script src='scripts/vendor/jquery.js'></script>
+        <script src='scripts/vendor/jquery.mCustomScrollbar.js'></script>
+        <script src='scripts/vendor/handlebars.js'></script>
+
+        <script src='scripts/errorHandling.js'></script>
+        <script src='scripts/config.js'></script>
+        <script src='scripts/constants.js'></script>
+
+
+        
+        <!--Script which contains functions which call the template-->
+        <!--  // <script src='scripts/skillTable.js'></script>  -->
+        <script src='scripts/login.js'></script>
+    </body>
+</html>
+    
+    

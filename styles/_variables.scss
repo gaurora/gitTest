@@ -1,0 +1,43 @@
+/*------------------
+Background variables
+--------------------*/
+$tertiaryBgColor :#21ADDD;
+$primaryBgColor :#dfe5e6;
+$secondaryBgColor :#f8f8f8;
+$secondryBackColor:#3A3A3A;
+/*------------
+Font variables
+--------------*/
+$primaryFontSize :24px;
+$primaryFontColor :#1d1d1d;
+$secondaryFontColor :#888;
+$headingFontColor :#E52728;
+$tertiaryFontColor :#fff;
+$fontColor :#666;
+$hoverColor:#1c9dd9;;
+$buttonFontColor :#fff;
+$disabledButton:#CCCCCC;
+$sapientHeat:#DE2728;
+$sapientFontMedium:sapientMedium;
+$sapientFontRegular:sapientRegular;
+/*----------------------
+Main Container variables
+------------------------*/
+$containerWidth :1170px; /*----- Changes as per the review comments by Lakha -----*/
+
+/*----------------------
+grid variables
+------------------------*/
+$minHeight: 1px;
+$lgBtnHeight:2rem;
+$smBtnHeight:1.5rem;
+$lgBtnWidth:5rem;
+$smBtnWidth:3.75rem;
+
+/* --------------------------------------------------------------------------
+INITIALIZING ALL VARIABLES
+-------------------------------------------------------------------------- */
+$desktopView:1024px;
+$tabletView:768px;
+$bubbleColor:#dcdcdc;
+$forHeight:20px;

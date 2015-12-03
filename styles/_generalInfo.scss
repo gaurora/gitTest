@@ -1,0 +1,162 @@
+/* ==========================================================================
+@project SKILL Tool
+@name    generalInfo CSS file
+@author  akatoch@sapient.com
+ 
+@description- SKILL MATRIX view CSS 
+========================================================================== */
+/*-----------------------------------------------
+margin variables variables
+-------------------------------------------------*/
+$margin-top: 20px;
+$margin-bottom:20px;
+$marginLeft:6.54%;
+
+/*----------------------------------------------------------
+Styling for right side sklills section.
+---------------------------------------------------------------*/
+$headingBgColor:#e8f7fc;
+$buttonColor:#21ADDD;
+$scrollColor:#999999;
+$buttonBgColor:#EEEEEE;
+$primaryHeadingColor:#de2728;
+$headingColor:#666666;
+$tableColor: #f4fbfd;
+$activeSkillBorder:#c3c9ca;
+
+.skills{
+	.title{
+		margin-top: 28px;
+		padding-top:30px;
+		padding-bottom:30px;
+		padding-left:28px;
+		background-color:white;
+		h3{ 
+			margin-left:40px;
+			margin-top: 4px;
+			text-decoration: none;
+			font-size:23px;
+			color:$primaryHeadingColor;
+		}
+		.fa-cogs{
+			color:$primaryHeadingColor;
+			float:left;
+		}
+		a{
+			@include hyperlinkStyle();
+			text-decoration:none;
+			cursor:pointer;
+			clear:both;
+			float:right;
+			margin-right:5%;
+	   		// bottom: 21px;
+	   		position: relative;
+    		bottom: 16px;
+	   		i{
+	   			padding-right:0.4rem;
+	   			font-size:small;
+	   		}
+	   	}
+	}
+	.table{
+		background-color:$tertiaryFontColor;
+		.skills-heading{
+			border-bottom:1px solid $activeSkillBorder;
+			padding:15px 0;
+			cursor:pointer;
+			.fa-plus-circle , .fa-minus-circle{
+				color:$tertiaryBgColor;
+				float:right;
+				padding-right:3%;
+				cursor:pointer;
+			}
+			span{
+				padding-left:4%;
+				 font-family:$sapientFontMedium;
+			}
+		}
+	}
+	.hide-skill{
+		display:none;
+	}
+	.editable-list{
+		padding-left: 0;
+		.language-rating{
+			position: relative;
+    		right: 20px;
+    	}
+    	li{
+    		font-family:$sapientFontRegular;
+    	}
+	}
+	.scrl{
+		max-height:150px;
+		overflow-y:auto;
+	}
+	.mCSB_scrollTools{
+	    right: 12%;
+	    .mCSB_dragger{
+			width: 6px;
+			margin-left: 5px;
+			background-color:$scrollColor;
+		}
+	}
+	.active-row{
+		border-bottom: 1px solid $activeSkillBorder;
+	}
+	.display-skill{
+		background-color:$tableColor;
+	 	li,.edit-label{
+			display:block;
+			padding-bottom:10px;
+			padding-top:10px;
+		}
+		ul{
+			>li{
+    		font-family: $sapientFontMedium;
+    		}
+		}
+	}
+	.active-row .skills-heading{
+		background-color:$headingBgColor;
+	}
+	span{
+		padding-left: 7%;
+		color:$headingColor;
+	}
+	button{
+		float:right;
+		background-color:$buttonBgColor;
+		color:$buttonColor;
+		position: relative;
+		margin-top:25px;
+	}
+	.button{
+		float:right;
+		margin-top:28px;
+		// padding:7px 15px;
+		margin-left:2.9%;	
+	}
+	.rating{
+		float:right;
+		margin-right: 40%;
+		background-color: $tableColor;
+		padding: 2px 12px;
+    	// border: none;
+    	// -webkit-appearance: none;
+    	// -moz-appearance: none;
+   		// appearance: none;
+
+   		// border: none;
+	}
+	select{
+		//border: none;
+    	//-webkit-appearance: none;
+    	//-moz-appearance: none;
+   		// appearance: none;
+   		border:1px solid gray;
+	}
+	.form-action{
+		visibility: hidden;
+	}
+} 	

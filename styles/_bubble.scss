@@ -1,0 +1,39 @@
+/* ==========================================================================
+* Module Name: bubble css
+* Role: For adding bubble in conversation page
+* Author: Vivek Mishra
+========================================================================== */
+
+.bubble,.bubble-alt {
+    box-sizing: border-box;
+    position: relative;
+    &:before,&:after{
+        content: '';
+        display: block;
+        position: absolute;
+   }
+}
+.bubble:before {
+  left: 0;
+  z-index: -2;
+}
+.bubble:after {
+  border-top-color:$bubbleColor; /* arrow color */
+  bottom: -10*$minHeight;
+  left: 0;
+  border-top: 20*$minHeight solid $bubbleColor;
+  border-right: 20*$minHeight solid transparent;
+}
+
+.bubble-alt:before {
+  left: auto;
+  right: 0;
+}
+.bubble-alt:after {
+  border-bottom-color:$secondaryFontColor;
+  left: auto;
+  right: 0;
+  bottom:-12*$minHeight;
+  border-top: 20*$minHeight solid $secondaryFontColor;
+  border-left: 20*$minHeight solid transparent;
+}

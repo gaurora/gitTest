@@ -1,0 +1,81 @@
+[
+  {
+    "oracle_id": 54625,
+    "name": "Fuller Zamora",
+    "profile_pic": "http://placehold.it/100x100",
+    "supervisor_name": "Cox Barker",
+    "gender": "<TypeError: Object #<Object> has no method 'gender'>",
+    "home_location": "Noida",
+    "email": "Terri.Mckee@sapient.com",
+    "title": "Senior Interactive Developer L2",
+    "rating_changed": true
+  },
+  
+  {
+    "oracle_id": 99250,
+    "name": "Theresa George",
+    "profile_pic": "http://placehold.it/100x100",
+    "supervisor_name": "Muriel Pittman",
+    "gender": "<TypeError: Object #<Object> has no method 'gender'>",
+    "home_location": "Bangalore",
+    "email": "Jordan.Campos@sapient.com",
+    "title": "Manager Interactive",
+    "rating_changed": true
+  },
+  {
+    "oracle_id": 51651,
+    "name": "Schneider Kaufman",
+    "profile_pic": "http://placehold.it/100x100",
+    "supervisor_name": "Hickman Collier",
+    "gender": "<TypeError: Object #<Object> has no method 'gender'>",
+    "home_location": "Noida",
+    "email": "Rios.Weaver@sapient.com",
+    "title": "Manager Interactive",
+    "rating_changed": true
+  },
+  
+  {
+    "oracle_id": 64840,
+    "name": "Ilene Maddox",
+    "profile_pic": "http://placehold.it/100x100",
+    "supervisor_name": "Avis Fisher",
+    "gender": "<TypeError: Object #<Object> has no method 'gender'>",
+    "home_location": "Gurgaon",
+    "email": "Gonzalez.Sloan@sapient.com",
+    "title": "Senior Interactive Developer L2",
+    "rating_changed": false
+  },
+  {
+    "oracle_id": 82638,
+    "name": "King Luna",
+    "profile_pic": "http://placehold.it/100x100",
+    "supervisor_name": "James Bowman",
+    "gender": "<TypeError: Object #<Object> has no method 'gender'>",
+    "home_location": "Noida",
+    "email": "Keith.Munoz@sapient.com",
+    "title": "Manager Interactive",
+    "rating_changed": false
+    },
+  {
+    "oracle_id": 61783,
+    "name": "Monique Peterson",
+    "profile_pic": "http://placehold.it/100x100",
+    "supervisor_name": "Ramirez Wells",
+    "gender": "<TypeError: Object #<Object> has no method 'gender'>",
+    "home_location": "Gurgaon",
+    "email": "Phelps.Blankenship@sapient.com",
+    "title": "Interactive Developer L1",
+    "rating_changed": false
+  },
+  {
+    "oracle_id": 88434,
+    "name": "Bradley Alford",
+    "profile_pic": "http://placehold.it/100x100",
+    "supervisor_name": "Fannie Holder",
+    "gender": "<TypeError: Object #<Object> has no method 'gender'>",
+    "home_location": "Bangalore",
+    "email": "Sharon.Peck@sapient.com",
+    "title": "Interactive Developer L1",
+    "rating_changed": true
+  }
+]

@@ -1,0 +1,135 @@
+$field-height:45px;
+$field-top-margin:20px;
+$field-border-radius:2px;
+
+/*
+* login.scss
+* @project   EYP Tool
+* @date      2015-09-30 
+* @author    BUSHRA KHAN, SapientNitro <bkhan@sapient.com>
+*/
+
+.login-container {
+    text-align: center;
+    height: 815px;
+    background-color: rgb(238, 238, 238);
+}
+
+#loginForm {
+    img {
+        width: 20px;
+        margin-top: 170px;
+    }
+    h1 {
+        color: #de2728;
+        margin-top: 15px;
+        font-size: 2.1rem;
+        padding-bottom: 5px;
+    }
+    h1 .eyp {
+        text-transform: uppercase;
+        font-family: SapientBold;
+        padding-right: 3px;
+    }
+    h1 .tool {
+        text-transform: capitalize;
+        font-family: SapientLight;
+    }
+    form {
+        margin: 0 auto;
+        width: 20%;
+    }
+    @media screen and (max-width: 1024px) {
+        form {
+            width: 25%;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        form {
+            width: 45%;
+        }
+    }
+    label {
+        position: absolute;
+        opacity: 0;
+    }
+    input {
+        width: 100%;
+        height: $field-height;
+        border: 1px solid white;
+        border-radius: $field-border-radius;
+        margin-top: $field-top-margin;
+        text-indent: 40px;
+        color: #696969;
+        box-shadow: 0 0 3px 3px rgb(233, 233, 233);
+    }
+    input:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0px 1000px white inset;
+    }
+    ::-webkit-input-placeholder {
+        color: #b3b3b3;
+        text-transform: capitalize;
+        text-indent: 40px;
+    }
+    :-moz-placeholder {
+        color: #d3d3d3;
+        text-transform: capitalize;
+        text-indent: 40px;
+    }
+    ::-moz-placeholder {
+        color: #d3d3d3;
+        text-transform: capitalize;
+        text-indent: 40px;
+    }
+    :-ms-input-placeholder {
+        color: #d3d3d3;
+        text-transform: capitalize;
+        text-indent: 40px;
+    }
+    input[type=submit] {
+        background-color: #1daeea;
+        color: white;
+        font-weight: bolder;
+        border: none;
+        text-transform: uppercase;
+        text-indent: 0;
+        margin-top: 30px;
+    }
+    input[type=submit]:hover {
+        background-color: #1c9dd9;
+    }
+    .username {
+        background: url("../images/username.png") no-repeat;
+        background-position: 20px 14px;
+        background-color: white;
+    }
+    .password {
+        background: url("../images/password.png") no-repeat;
+        background-position: 20px 13px;
+        background-color: white;
+    }
+}
+
+
+<!--
+* login.html
+* @project   EYP Tool
+* @date      2015-09-30 
+* @author    BUSHRA KHAN, SapientNitro <bkhan@sapient.com>
+-->
+
+<main class="login-container">
+    <section id="loginForm">
+        <img src="../images/sapient-gray-logo.png" alt="sapient logo">
+        <h1><span class="eyp">eyp</span><span class="tool">Tool</span></h1>
+        <form action="#" method="GET" id="loginForm">
+            <label for="username">username:</label>
+            <input type='text' id="username" name="username" class="username" autocomplete="off" placeholder='sapient NT ID'>
+            <p class="error-message"></p>
+            <label for="password">password:</label>
+            <input type='password' id="password" name="password" class="password"  autocomplete="off" placeholder='password'>
+            <p class="error-message"></p>
+            <input id="loginSubmitBtn" type='submit' value="log in">
+        </form>
+    </section>
+</main>

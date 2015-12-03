@@ -1,0 +1,74 @@
+<!--  ==========================================================================
+@project SKILL Tool
+@name    header CSS file
+@author  akatoch@sapient.com
+ 
+@description- Header view CSS 
+==========================================================================  -->
+
+<script src='scripts/pictureFill.js'></script>
+<header>
+    <div id='headerContainer'>
+    </div>
+</header>
+<script id='headerTpl' type='text/x-handlebars-template'>
+    <section id='user'>
+        <div class='container clearfix'>
+            <div>
+                <h1>SKILL<span>Tool</span></h1>
+            </div>
+            {{#if is_supervisor}}  
+                <div id='searchContainer'>
+                    <span class='search-icon'></span>
+                    <label for='searchBox' class='accessibility'>Search People</label>
+                    <input type='search' placeholder='Search by Name or Oracle ID...' id='searchBox' />
+                </div>
+            {{/if}}
+            <div id='userInfoNotiBox'>
+                {{#if is_supervisor}}    
+                    <div id='notification'>
+                        <span class='notificationIcon'><span>4</span></span>
+                        <div id='notificationMenu' class='submenu hide'> 
+                        </div>
+                    </div>
+                {{/if}}
+                <div id='userInfo'>
+                    <img  src='{{profile_pic}}' alt='{{name}}' title='{{name}}' class="profileImage"/>
+                    <span>{{name}}</span>
+                    <i class='fa fa-chevron-down'></i>
+                    <div id='headerSubmenu' class='submenu hide'> 
+                        <ul>
+                            <li><a href='#' id='logout'>Logout</a></li>
+                        </ul>                          
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</script>
+<script id='headerSuperviseeInfo' type='text/x-handlebars-template'>
+    <section id='profileInfo' class='container'>
+        <picture>
+            <source srcset='{{profile_pic}} 700w' media='(max-width: 768px)' sizes='(min-width: 768px) 100px, 100vw'/>
+            <img src='{{profile_pic}}' alt='{{name}}' title='{{name}}'/>
+        </picture>
+        <ul class='user-details'>
+            <li>{{name}}</li>
+            <li>{{title}}</li>
+        </ul>
+        <div class='contact-info'>
+            <img src='images/phone.png'/><span>+91 987654321</span> | 
+            <img src='images/mail.png'/><a href='mailto:{{email}}'>{{email}}</a>
+        </div>
+    </section>
+</script>
+<script id='superviseeNotifications' type='text/x-handlebars-template'>
+    <ul>
+        {{#each this}}
+            {{#if rating_changed}}
+                <li><a href='javascript:SKILL.header.pageScroll({{oracle_id}})'>{{name}}</a></li>
+            {{/if}}
+        {{/each}}
+    </ul>  
+</script>  
+

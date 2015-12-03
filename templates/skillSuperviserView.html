@@ -1,0 +1,51 @@
+<!-- 
+@project SKILL Tool
+@name    SupervisorView HTML file
+@author  akatoch@sapient.com
+ 
+@description- Supervisor view HTML -->
+
+<script id='skillSuperviser' type='text/x-handlebars-template'>
+	<section class=' skillSuperviser col-sm-12 col-md-12 col-lg-12'>
+		<div class='tittle'>
+			<i class='fa fa-cogs fa-2x'></i>
+			<h3>Skills</h3>
+		</div>
+		{{#each categories}}
+			<ul class='table'>
+				<li class='skills-heading'><span>{{name}}</span> <i class='fa fa-plus-circle icon'></i></li>
+				<li class=' hide-skill '>
+					<ul>
+						<li class='row'><span class='col-xs-6 col-sm-4 col-md-4 col-lg-4'>Languages</span><span class='rate user col-xs-6 col-sm-3 col-md-3 col-lg-3'>Rating </span></li>
+						<li class='editable-list '>
+							<ul class='scrl mCustomScrollbar'>
+								{{#each languages}}
+									<li class='row'>
+										<span class='col-xs-6 col-sm-4 col-md-4 col-lg-4'>{{name}}</span><span class='rate language-rating col-xs-6 col-sm-3 col-md-3 col-lg-3'>{{user_rating}}</span>
+										<span class='selectionBtn col-sm-5 col-md-5 col-lg-5'>
+
+										<input type = 'button' value = 'approve' class='button hoverNav'/> 							
+										<input type = 'button' value = 'nominate' class='button hoverNav'/> 
+										<input type = 'button' value = 'deny' class='button hoverNav'/> </span>
+									</li>
+									<li class='comments hide'>								
+										<textarea rows='4' placeholder='Please Elaborate(250 words max...)' maxlength='250'></textarea>
+										<div class='hide'>Please fill in the above field</div>
+										<button class='col-lg-offset-9 col-md-offset-9 col-sm-offset-9 col-xs-offset-6'>cancel</button>
+										<input type = 'button' value = 'submit' class='button '/>
+									</li>
+								{{/each}}
+							</ul>						
+						</li>
+					</ul>
+				</li>
+			</ul>
+		{{/each}}	
+		<input type = 'button' value = 'submit' class='button hide form-action'/> 
+		<button class='hide form-action'>reset</button>	
+	</section>
+</script>
+
+<!-- Right skill section section ends here -->
+<!-- general information ends here-->
+

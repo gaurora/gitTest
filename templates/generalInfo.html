@@ -1,0 +1,53 @@
+<!--Skill Matrix starts here -->
+<!-- 
+@project SKILL Tool
+@name    generalInfo HTML file
+@author  akatoch@sapient.com
+ 
+@description- Supervisee view HTML -->
+ 
+<script id='skillsTemplate' type='text/x-handlebars-template'>
+	<section class=' skills col-sm-12 col-md-12 col-lg-12'>
+		<div class='title'>
+			<i class='fa fa-cogs fa-2x'></i>
+			<h3>Skills</h3>
+			<a class='edit'>
+				<i class='fa fa-pencil img'></i>EDIT
+			</a>
+		</div>
+		{{#each categories}}
+			<ul class='table'>
+				<li class='skills-heading'><span>{{name}}</span> <i class='fa fa-plus-circle icon'></i></li>
+				<li class=' hide-skill '>
+					<ul>
+						<li><span>Languages</span><span class='rating'>Rating </span></li>
+						<li class='editable-list '>
+							<ul class='scrl mCustomScrollbar'>
+								{{#each languages}}
+									<li>
+										<span><label for='{{name}}' >{{name}}</label><span>
+										<span class='rating language-rating'>{{user_rating}}</span>
+										<select name='{{name}}' id='{{name}}' class='rating hide'>
+											<option value='5'>5</option>
+											<option value='4'>4</option>
+											<option value='3'>3</option>
+											<option value='2'>2</option>
+											<option value='1'>1</option>
+											<option value='0'>0</option>
+										</select>
+									</li>
+								{{/each}}
+							</ul>						
+						</li>
+					</ul>
+				</li>
+			</ul>
+		{{/each}}	
+		<input type = 'button' value = 'submit' class='button  form-action'/> 
+		<button class=' form-action'>reset</button>			
+	</section>	
+</script>
+
+<!-- skill matrix section ends here -->
+
+

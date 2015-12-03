@@ -1,0 +1,109 @@
+
+/*-----------------------------------
+Mixin for Background Image
+-------------------------------------*/
+@mixin bgImg ($img, $repeat, $xPos, $yPos) {
+	background-image: url($img);	
+	background-repeat:$repeat;
+	background-position: $xPos $yPos;
+}
+/*-----------------------------------
+Mixin for headings
+-------------------------------------*/
+@mixin heading ($size, $lineHeight, $family, $color) {
+	font-size: $size;
+	line-height: $lineHeight;
+	font-family: $family;	
+	color: $color;
+	text-transform: Capitalize;
+	text-decoration:none;
+}
+/*-----------------------------------
+
+/*-----------------------------------
+Mixin for Placeholder
+-------------------------------------*/
+@mixin placeholder ($color,$fontSize) {
+	::-webkit-input-placeholder{
+		color: $color;
+	 	font-size: $fontSize;
+
+	}		
+	:-moz-placeholder{ 
+		color: $color;
+	 	font-size: $fontSize;
+	}
+	::-moz-placeholder{ 
+		color: $color;
+	 	font-size: $fontSize;
+	}
+	:-ms-input-placeholder{
+		color: $color;
+	 	font-size: $fontSize;
+	}	
+}
+/*-----------------------------------
+Mixin for Grid
+-------------------------------------*/
+@mixin column{
+	position: relative;
+	box-sizing: border-box;
+	min-height: $minHeight;
+	float: left;
+	padding-right:10px;
+	padding-left:10px;
+}
+/*-----------------------------------
+Mixin for font face
+-------------------------------------*/
+@mixin fontFace($fontName, $fontUrl ,$fontUrl2) {
+	font-family: $fontName;
+	src:url($fontUrl2), 
+		url($fontUrl);
+			
+}
+
+/* ==========================================================================
+MIXIN FOR ARTICLE STYLE
+========================================================================== */
+@mixin articleStyle{
+	/*padding:10px 3% 22px 3%;*/
+	background:$primaryBgColor;
+	margin:$forHeight 0 30px 0;
+}
+
+/* ==========================================================================
+MIXIN FOR TEXTAREA STYLE
+========================================================================== */
+@mixin textAreaStyle{
+	height:$forHeight*5;
+	text-indent:5%;
+	resize:none;
+	outline:none;
+}
+
+/* ==========================================================================
+MIXIN FOR HYPER LINK STYLE
+========================================================================== */
+@mixin hyperlinkStyle{
+	color:$tertiaryBgColor;
+	text-decoration:underline;
+	font-family:SapientRegular;
+	&:hover{
+		color:#4A86B4;
+	}
+	&:active{
+		color:#7FBDE8;
+	}
+}
+/* ==========================================================================
+MIXIN FOR BOX SHADOW STYLE
+========================================================================== */
+@mixin boxShadow ($horPos, $verPos, $blur, $color) {
+	-webkit-box-shadow: $horPos $verPos $blur $color;
+	-moz-box-shadow: $horPos $verPos $blur $color;
+	-o-box-shadow: $horPos $verPos $blur $color;
+	box-shadow: $horPos $verPos $blur $color;
+}
+
+

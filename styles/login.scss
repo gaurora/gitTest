@@ -1,0 +1,99 @@
+
+/* ==========================================================================
+@project SKILL Tool
+@name    login CSS file
+@author  akatoch@sapient.com
+ 
+@description- login view CSS 
+========================================================================== */
+$buttonBgColor:#EEEEEE;
+$inputShadow:#E9E9E9;
+$inputFieldColor:#696969;
+
+.login-container {
+    text-align: center;
+    height: 815px;
+    //background-color: $buttonBgColor;
+}
+
+#loginForm {
+    img {
+        width: 20px;
+        margin-top: 170px;
+    }
+    h1 {
+        color: $sapientHeat;
+        margin-top: 20px;
+        font-size: 2.1rem;
+        padding-bottom: 5px;
+    }
+    h1 .eyp {
+        text-transform: uppercase;
+        font-family: SapientBold;
+        padding-right: 3px;
+    }
+    h1 .tool {
+        text-transform: capitalize;
+        font-family: SapientLight;
+    }
+    form {
+        margin: 0 auto;
+        width: 20%;
+    }
+    @media screen and (max-width: $desktopView) {
+        form {
+            width: 25%;
+        }
+    }
+    @media screen and (max-width: $tabletView) {
+        form {
+            width: 45%;
+        }
+    }
+    label {
+        position: absolute;
+        opacity: 0;
+    }
+    input {
+        width: 220px;
+        height: 40px;
+        border: 1px solid $tertiaryFontColor;
+        border-radius: 2px;
+        margin-top: 20px;
+        text-indent: 40px;
+        color: $inputFieldColor;
+        @include boxShadow (0,0,3px,$inputShadow);
+    }
+    input[type=submit] {
+        // background-color: #1daeea;
+        color: $tertiaryFontColor;
+         //font-weight: bolder;
+        // border: none;
+        text-transform: uppercase;
+        text-indent: 0;
+        margin-top: 10px;
+    }
+    // input[type=submit]:hover {
+    //     background-color: #1c9dd9;
+    // }
+    .username {
+        @include bgImg("../images/username.png",no-repeat,20px,14px);
+       //background: url("../images/username.png") no-repeat;
+       // background-position: 20px 14px;
+        background-color: $tertiaryFontColor;
+    }
+    .error {   
+        border-color: $sapientHeat;
+    }
+    .password {
+        @include bgImg("../images/password.png",no-repeat,20px,14px);
+        //background: url("../images/password.png") no-repeat;
+       // background-position: 20px 13px;
+        background-color: $tertiaryFontColor;
+    }
+    .error-message{
+        margin-top:22px;
+        color:$sapientHeat;
+        font-size:13px;
+    }
+}

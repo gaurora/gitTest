@@ -1,0 +1,213 @@
+/* ==========================================================================
+@project SKILL Tool
+@name    skillSuperviserView CSS file
+@author  akatoch@sapient.com
+ 
+@description- Skill Supervisor view CSS 
+========================================================================== */
+/*-----------------------------------------------
+margin variables variables
+-------------------------------------------------*/
+$margin-top: 20px;
+$margin-bottom:20px;
+$marginLeft:6.54%;
+
+/*----------------------------------------------------------
+Styling for right side sklills section.
+---------------------------------------------------------------*/
+$headingBgColor:#e8f7fc;
+$buttonColor:#21ADDD;
+
+$buttonBgColor:#EEEEEE;
+$primaryHeadingColor:#de2728;
+$headingColor:#666666;
+$tableColor: #f4fbfd;
+$activeSkillBorder:#c3c9ca;
+$textAreaColor:#FFF;
+// #CACACA:#CACACA;
+$commentsBgColor:#F5F5F5;
+$commentsBorder:#E6E6E6;
+.skillSuperviser{
+	.tittle{
+		margin-top: 28px;
+		padding-top:30px;
+		padding-bottom:30px;
+		padding-left:28px;
+		background-color:white;
+		h3{ 
+			margin-left:40px;
+			margin-top: 4px;
+			text-decoration: none;
+			font-size:23px;
+			color:$primaryHeadingColor;
+		}
+		.fa-cogs{
+			color:$primaryHeadingColor;
+			float:left;
+		}
+		a{
+			@include hyperlinkStyle();
+			text-decoration:none;
+			cursor:pointer;
+			float:right;
+			position: relative;
+	    	right: 7%;
+	   		bottom: 21px;
+	   	}
+	}
+	.table{
+		cursor: pointer;
+		.skills-heading{
+			border-bottom:1px solid $activeSkillBorder;
+			padding:15px 0;
+			.fa-plus-circle , .fa-minus-circle{
+				color:$tertiaryBgColor;
+				float:right;
+				padding-right:3%;
+				cursor:pointer;
+			}
+			span{
+				font-family: $sapientFontMedium;
+			}
+		}
+	}
+	.hide-skill{
+		display:none;
+	}
+	.editable-list{
+		padding-left: 0;
+		li{
+			 font-family:$sapientFontRegular;
+			span:nth-child(2){
+				left:12px;
+			}
+			span:nth-child(3){
+				.button{
+					// padding:0 5px;
+					// height:3rem;
+					margin-right: 4%;
+					&:disabled{
+						background:$disabledButton;
+						cursor:not-allowed;
+					
+					}
+				}
+			}
+		}
+	}
+	.scrl{
+		max-height:450px;
+		overflow-y:auto;
+	}
+	.mCSB_scrollTools{
+		right: 3%;
+	    .mCSB_dragger{
+			width: 6px;
+			margin-left: 5px;
+			background-color:$scrollColor;
+		}
+	}
+	.active-row{
+		border-bottom: 1px solid $activeSkillBorder;
+	}
+	.display-skill{
+		.edit-label{
+			padding-bottom:10px;
+			padding-top:10px;
+		}
+		ul{
+			>li{
+			    font-family:$sapientFontMedium;
+			}
+		}
+		span{
+			padding-left:7%;
+		}
+		ul{
+			.comments{
+				background-color:$commentsBgColor;
+				padding-left:0;
+				width: 96%;
+	    		margin-left: 2%;
+			}
+		}	
+	}
+	.active-row .skills-heading{
+		background-color:$headingBgColor;
+	}
+	.skills-heading{
+		background-color:$textAreaColor;
+	}
+	span{
+		padding-left:4%;
+		color:$headingColor;
+	}
+	.comments{
+		border:1px solid $commentsBorder;
+		div{
+			color:$sapientHeat;
+			margin-left:3%;
+		}
+		button{
+			background-color:$commentsBgColor;
+			color:$buttonColor;
+		}
+		.button{
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+	}
+	textarea{
+ 		border:1px solid #CACACA;
+		margin-left: 3%;
+		margin-top: 15px;
+		resize: none;
+		width:94%;
+ 	}
+	.row{
+		font-family:$sapientFontRegular;
+		background-color:$tableColor;
+	    margin-left: 0;
+   	 	margin-right: 0;
+        padding-top: 12px;
+   		padding-bottom: 18px;
+    // border-left:1px solid rgb(206,206,206);
+    // border-right:1px solid rgb(206,206,206);
+	}
+	@media only screen and (max-width: $tabletView) {
+ 		.editable-list li span:nth-child(3) .button{
+			// padding:0 ;
+			// height:2rem;
+		    margin-right:11px;
+		}
+		.selectionBtn{
+		    padding-top: 21px;
+			// margin-left: 50%;
+			float:right;
+		}
+		.comments .button{
+			padding:0;
+		}
+		.mCSB_scrollTools{
+			right:0;
+		}
+	}
+	
+}
+// .hoverNav{
+// 	&:before{
+// 		background-color:red;
+// 		content: "";
+// 		// position:absolute; 
+// 		border-bottom: 8px solid;
+// 		border-left:9px solid red;
+// 		border-right: 9px solid red;
+// 		// margin-top: 35px;
+// 		// margin-left:3.5%;
+// 	}
+// }
+// .hoverNav{
+// 			&:before{
+// 			visibility: hidden;
+// 			}
+// 		}
